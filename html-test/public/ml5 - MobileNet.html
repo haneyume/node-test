@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>ml5 - MobileNet</title>
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- p5 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/p5.min.js"></script>
+    <!-- ml5 -->
+    <script src="https://unpkg.com/ml5@latest/dist/ml5.min.js"></script>
+  </head>
+
+  <body>
+    <script>
+      let video;
+      let classifier;
+      let resultsP;
+
+      function setup() {
+        createCanvas(640, 480);
+
+        video = createCapture(VIDEO);
+        video.size(width, height);
+        video.hide();
+
+        classifier = ml5.imageClassifier('MobileNet', video, modelReady);
+
+        resultsP = createP('Loading model and video...');
+      }
+
+      function draw() {
+        background(0);
+
+        image(video, 0, 0, width, height);
+      }
+
+      function modelReady() {
+        console.log('Model Ready');
+        classifyVideo();
+      }
+
+      // Get a prediction for the current video frame
+      function classifyVideo() {
+        classifier.classify(gotResult);
+      }
+
+      // When we get a result
+      function gotResult(err, results) {
+        // The results are in an array ordered by confidence.
+        resultsP.html(`${results[0].label} ${nf(results[0].confidence, 0, 2)}`);
+        classifyVideo();
+      }
+    </script>
+  </body>
+</html>

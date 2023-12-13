@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>ml5 - Facemesh</title>
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- p5 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/p5.min.js"></script>
+    <!-- ml5 -->
+    <script src="https://unpkg.com/ml5@latest/dist/ml5.min.js"></script>
+  </head>
+
+  <body>
+    <script>
+      let video;
+      let facemesh;
+      let predictions = [];
+
+      function setup() {
+        createCanvas(640, 480);
+
+        video = createCapture(VIDEO);
+        video.size(width, height);
+        video.hide();
+
+        facemesh = ml5.facemesh(video, modelReady);
+
+        facemesh.on('face', (results) => {
+          predictions = results;
+        });
+      }
+
+      function draw() {
+        background(0);
+
+        image(video, 0, 0, width, height);
+
+        drawKeypoints();
+      }
+
+      function modelReady() {
+        console.log('Model ready!');
+      }
+
+      function drawKeypoints() {
+        for (let i = 0; i < predictions.length; i++) {
+          const keypoints = predictions[i].scaledMesh;
+
+          for (let j = 0; j < keypoints.length; j++) {
+            const [x, y] = keypoints[j];
+
+            fill(0, 255, 0);
+            ellipse(x, y, 5, 5);
+          }
+        }
+      }
+    </script>
+  </body>
+</html>
