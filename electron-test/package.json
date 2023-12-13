@@ -11,7 +11,7 @@
   "dependencies": {
     "@electron-toolkit/preload": "^2.0.0",
     "@electron-toolkit/utils": "^2.0.1",
-    "electron-reload": "^2.0.0-alpha.1"
+    "electron-reload": "2.0.0-alpha.1"
   },
   "devDependencies": {
     "@types/node": "^20.10.4",

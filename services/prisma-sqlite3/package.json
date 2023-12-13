@@ -1,0 +1,23 @@
+{
+  "name": "prisma-sqlite3",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "migrate": "prisma migrate dev",
+    "push": "prisma db push --accept-data-loss",
+    "studio": "prisma studio",
+    "seed": "ts-node src/seed.ts",
+    "cleanup": "ts-node src/cleanup.ts"
+  },
+  "dependencies": {
+    "@faker-js/faker": "^8.3.1",
+    "@prisma/client": "^5.7.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.4",
+    "nodemon": "^3.0.2",
+    "prisma": "^5.7.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.3.3"
+  }
+}
