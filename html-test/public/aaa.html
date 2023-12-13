@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Ariakit</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <!-- Babel -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <!-- Usage -->
+    <script type="text/babel" data-type="module">
+      import * as React from 'https://esm.sh/react';
+      import { createRoot } from 'https://esm.sh/react-dom';
+      import { Button } from 'https://esm.sh/@ariakit/react';
+
+      function App() {
+        return <Button>Button</Button>;
+      }
+
+      createRoot(document.getElementById('root')).render(<App />);
+    </script>
+
+    <script>
+      function flashTitleNotification() {
+        var originalTitle = document.title;
+        var isFlash = false;
+        function changeTitle() {
+          document.title = isFlash
+            ? '(10) New Message Received'
+            : originalTitle;
+          isFlash = !isFlash;
+        }
+        setInterval(changeTitle, 1000);
+      }
+
+      window.onload = flashTitleNotification;
+    </script>
+  </body>
+</html>

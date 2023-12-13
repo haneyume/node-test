@@ -4,12 +4,13 @@
   "version": "0.0.0",
   "workspaces": [
     "electron-test",
+    "html-test",
     "vue-test",
-    "services/*",
-    "packages/*"
+    "services/*"
   ],
   "scripts": {
     "dev:electron": "cd electron-test && yarn dev",
+    "dev:html": "cd html-test && yarn dev",
     "dev:vue": "cd vue-test && yarn dev"
   }
 }

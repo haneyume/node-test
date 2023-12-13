@@ -1,0 +1,11 @@
+{
+  "name": "html-test",
+  "private": true,
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "http-server -p 8080"
+  },
+  "dependencies": {
+    "http-server": "^14.1.1"
+  }
+}

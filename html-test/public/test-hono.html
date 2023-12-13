@@ -1,0 +1,28 @@
+<html>
+  <head>
+    <script type="module">
+      import { Hono } from 'https://esm.sh/hono';
+
+      const app = new Hono();
+      app.get('*', (c) => {
+        return c.text(`${c.req.method} ${c.req.path}`);
+      });
+      app.post('*', (c) => {
+        return c.text(`${c.req.method} ${c.req.path}`);
+      });
+
+      const res = await app.request(location.href, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'text/plain',
+        },
+      });
+
+      document.getElementById('result').innerText = await res.text();
+    </script>
+  </head>
+
+  <body>
+    <div id="result"></div>
+  </body>
+</html>
