@@ -1,0 +1,11 @@
+name = "hono-cf-test"
+compatibility_date = "2022-02-12"
+workers_dev = true
+
+[vars]
+UNSPLASH_ACCESS_KEY = ""
+UNSPLASH_SECRET_KEY = ""
+GIPHY_API_KEY = ""
+
+[site]
+bucket = "./public"
