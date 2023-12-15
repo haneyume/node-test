@@ -5,12 +5,14 @@
   "workspaces": [
     "electron-test",
     "html-test",
+    "react-test",
     "vue-test",
     "services/*"
   ],
   "scripts": {
     "dev:electron": "cd electron-test && yarn dev",
     "dev:html": "cd html-test && yarn dev",
+    "dev:react": "cd react-test && yarn dev",
     "dev:vue": "cd vue-test && yarn dev"
   }
 }
