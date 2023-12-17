@@ -5,6 +5,7 @@
   "workspaces": [
     "electron-test",
     "html-test",
+    "nextjs-test",
     "react-test",
     "vue-test",
     "services/*"
