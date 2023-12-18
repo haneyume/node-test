@@ -24,6 +24,8 @@ import { About } from './pages/About';
 import { Katex } from './pages/Katex';
 import { Mermaid } from './pages/Mermaid';
 import { Spreadsheet } from './pages/Spreadsheet';
+import { XArrowView } from './pages/XArrowView';
+import { LottieView } from './pages/LottieView';
 
 export const App = () => {
   return (
@@ -63,6 +65,14 @@ const router = createBrowserRouter([
       {
         path: 'spreadsheet',
         element: <Spreadsheet />,
+      },
+      {
+        path: 'xarrow',
+        element: <XArrowView />,
+      },
+      {
+        path: 'lottie',
+        element: <LottieView />,
       },
     ],
   },

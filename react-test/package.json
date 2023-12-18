@@ -29,6 +29,7 @@
     "dayjs": "^1.11.10",
     "i18next": "^23.7.11",
     "jspreadsheet-ce": "^4.13.4",
+    "lottie-react": "^2.4.0",
     "mermaid": "^10.6.1",
     "numbro": "^2.4.0",
     "postcss-preset-mantine": "^1.11.1",
@@ -40,6 +41,7 @@
     "react-katex": "^3.0.1",
     "react-redux": "^9.0.4",
     "react-router-dom": "^6.21.0",
+    "react-xarrows": "^2.0.2",
     "redux-undo": "^1.1.0"
   },
   "devDependencies": {

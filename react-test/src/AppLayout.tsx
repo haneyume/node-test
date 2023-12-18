@@ -58,6 +58,18 @@ export const AppLayout = ({}: { children?: ReactNode }) => {
               onClick={() => navigate('/spreadsheet')}
               active={window.location.pathname === '/spreadsheet'}
             />
+            <NavLink
+              label="XArrowView"
+              leftSection={<IconSettings size={18} />}
+              onClick={() => navigate('/xarrow')}
+              active={window.location.pathname === '/xarrow'}
+            />
+            <NavLink
+              label="LottieView"
+              leftSection={<IconSettings size={18} />}
+              onClick={() => navigate('/lottie')}
+              active={window.location.pathname === '/lottie'}
+            />
           </div>
         </div>
       </AppShell.Navbar>
