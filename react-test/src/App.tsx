@@ -21,6 +21,9 @@ import { AppReduxProvider, store } from '@/app-redux';
 import { AppLayout } from './AppLayout';
 import { Home } from './pages/Home';
 import { About } from './pages/About';
+import { Katex } from './pages/Katex';
+import { Mermaid } from './pages/Mermaid';
+import { Spreadsheet } from './pages/Spreadsheet';
 
 export const App = () => {
   return (
@@ -48,6 +51,18 @@ const router = createBrowserRouter([
       {
         path: 'about',
         element: <About />,
+      },
+      {
+        path: 'katex',
+        element: <Katex />,
+      },
+      {
+        path: 'mermaid',
+        element: <Mermaid />,
+      },
+      {
+        path: 'spreadsheet',
+        element: <Spreadsheet />,
       },
     ],
   },

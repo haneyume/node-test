@@ -40,6 +40,24 @@ export const AppLayout = ({}: { children?: ReactNode }) => {
               onClick={() => navigate('/about')}
               active={window.location.pathname === '/about'}
             />
+            <NavLink
+              label="Katex"
+              leftSection={<IconSettings size={18} />}
+              onClick={() => navigate('/katex')}
+              active={window.location.pathname === '/katex'}
+            />
+            <NavLink
+              label="Mermaid"
+              leftSection={<IconSettings size={18} />}
+              onClick={() => navigate('/mermaid')}
+              active={window.location.pathname === '/mermaid'}
+            />
+            <NavLink
+              label="Spreadsheet"
+              leftSection={<IconSettings size={18} />}
+              onClick={() => navigate('/spreadsheet')}
+              active={window.location.pathname === '/spreadsheet'}
+            />
           </div>
         </div>
       </AppShell.Navbar>
