@@ -70,6 +70,30 @@ export const AppLayout = ({}: { children?: ReactNode }) => {
               onClick={() => navigate('/lottie')}
               active={window.location.pathname === '/lottie'}
             />
+            <NavLink
+              label="BlocklyView"
+              leftSection={<IconSettings size={18} />}
+              onClick={() => navigate('/blockly')}
+              active={window.location.pathname === '/blockly'}
+            />
+            <NavLink
+              label="FrameComponent"
+              leftSection={<IconSettings size={18} />}
+              onClick={() => navigate('/frame')}
+              active={window.location.pathname === '/frame'}
+            />
+            <NavLink
+              label="ZoomPanel"
+              leftSection={<IconSettings size={18} />}
+              onClick={() => navigate('/zoom')}
+              active={window.location.pathname === '/zoom'}
+            />
+            <NavLink
+              label="ArcherView"
+              leftSection={<IconSettings size={18} />}
+              onClick={() => navigate('/archer')}
+              active={window.location.pathname === '/archer'}
+            />
           </div>
         </div>
       </AppShell.Navbar>

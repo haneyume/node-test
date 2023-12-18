@@ -26,6 +26,10 @@ import { Mermaid } from './pages/Mermaid';
 import { Spreadsheet } from './pages/Spreadsheet';
 import { XArrowView } from './pages/XArrowView';
 import { LottieView } from './pages/LottieView';
+import { BlocklyView } from './pages/BlocklyView';
+import { FrameComponent } from './pages/FrameComponent';
+import { ZoomPanel } from './pages/ZoomPanel';
+import { ArcherView } from './pages/ArcherView';
 
 export const App = () => {
   return (
@@ -73,6 +77,22 @@ const router = createBrowserRouter([
       {
         path: 'lottie',
         element: <LottieView />,
+      },
+      {
+        path: 'blockly',
+        element: <BlocklyView />,
+      },
+      {
+        path: 'frame',
+        element: <FrameComponent />,
+      },
+      {
+        path: 'zoom',
+        element: <ZoomPanel />,
+      },
+      {
+        path: 'archer',
+        element: <ArcherView />,
       },
     ],
   },
