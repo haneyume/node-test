@@ -1,0 +1,23 @@
+{
+  "name": "drizzle-test",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "nodemon src/index.ts",
+    "migration": "drizzle-kit generate:sqlite --out migrations --schema src/schema.ts",
+    "push": "drizzle-kit push:sqlite",
+    "studio": "drizzle-kit studio"
+  },
+  "dependencies": {
+    "better-sqlite3": "^9.2.2",
+    "drizzle-orm": "^0.29.2"
+  },
+  "devDependencies": {
+    "@types/better-sqlite3": "^7.6.8",
+    "@types/node": "^20.10.4",
+    "drizzle-kit": "^0.20.9",
+    "nodemon": "^3.0.2",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.3.3"
+  }
+}
