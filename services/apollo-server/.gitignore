@@ -15,3 +15,6 @@ build/
 # .env
 #
 .env
+
+# misc
+dist
