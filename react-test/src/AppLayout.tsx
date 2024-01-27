@@ -94,6 +94,12 @@ export const AppLayout = ({}: { children?: ReactNode }) => {
               onClick={() => navigate('/archer')}
               active={window.location.pathname === '/archer'}
             />
+            <NavLink
+              label="CodeSnippets"
+              leftSection={<IconSettings size={18} />}
+              onClick={() => navigate('/code-snippets')}
+              active={window.location.pathname === '/code-snippets'}
+            />
           </div>
         </div>
       </AppShell.Navbar>

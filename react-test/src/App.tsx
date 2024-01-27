@@ -30,6 +30,7 @@ import { BlocklyView } from './pages/BlocklyView';
 import { FrameComponent } from './pages/FrameComponent';
 import { ZoomPanel } from './pages/ZoomPanel';
 import { ArcherView } from './pages/ArcherView';
+import { CodeSnippetsPage } from './pages/CodeSnippetsPage';
 
 export const App = () => {
   return (
@@ -93,6 +94,10 @@ const router = createBrowserRouter([
       {
         path: 'archer',
         element: <ArcherView />,
+      },
+      {
+        path: 'code-snippets',
+        element: <CodeSnippetsPage />,
       },
     ],
   },
